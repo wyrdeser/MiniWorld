@@ -11,7 +11,9 @@ target_include_directories(glad PUBLIC third_party/glad/include)
 add_executable(
     MiniWorld
     src/main.cpp
-
+    src/core/application.cpp
+    src/core/window.cpp
+    src/renderer/renderer.cpp
 )
 
 target_compile_options(MiniWorld PRIVATE -Wall -Wextra)
