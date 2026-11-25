@@ -14,6 +14,7 @@ add_executable(
     src/core/application.cpp
     src/core/window.cpp
     src/renderer/renderer.cpp
+    src/renderer/shader.cpp
 )
 
 target_compile_options(MiniWorld PRIVATE -Wall -Wextra)
@@ -22,6 +23,10 @@ target_include_directories(MiniWorld PRIVATE
     src
     third_party/stb
     third_party/glm
+)
+
+target_compile_definitions(MiniWorld PRIVATE
+    MINIWORLD_ASSET_DIR="${CMAKE_CURRENT_SOURCE_DIR}/assets"
 )
 
 target_link_libraries(MiniWorld PRIVATE SDL3::SDL3 glad)

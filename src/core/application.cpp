@@ -65,5 +65,6 @@ void Application::Render(){
 
 void Application::Shutdow(){
     running_ = false;
+    renderer_.Shutdow();
     window_.Shutdow();
 }
